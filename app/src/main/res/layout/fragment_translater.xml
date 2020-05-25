@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="150dp"
+                android:text="Kyr -> Lat"
+                android:textColor="#020202"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingStart="15dp"
+            android:paddingTop="3dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/gear96"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="400dp"
+        android:layout_height="500dp">
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:text="Кириллица"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:layout_width="374dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/edit_border">
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:hint="Ввод...."
+                        android:padding="5dp"
+                        android:textSize="20dp" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="390dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:text="Латиница"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/edit_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewLat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:hint="Вывод...."
+                            android:padding="5dp"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/textViewRus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:hint="Вывод...."
+                            android:padding="5dp"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="390dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="5dp">
+
+                <ScrollView
+                    android:layout_width="375dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/edit_border">
+
+                    <TextView
+                        android:id="@+id/textViewFreq"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Частотность...."
+                        android:padding="5dp"
+                        android:textSize="20sp" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:text="История"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edit_border">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewText"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginEnd="15dp"
+                    tools:listitem="@layout/item" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="15dp"
+                    android:text="Избранное"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/edit_border">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginEnd="15dp"
+                tools:listitem="@layout/forfavitems"/>
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_tr"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:background="#17A391"
+            android:text="Транслит"
+            android:textColor="#231C1C"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btn_transl"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="35dp"
+            android:background="#17A391"
+            android:text="Перевод"
+            android:textColor="#231C1C"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
